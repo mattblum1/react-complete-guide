@@ -43,7 +43,8 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: '#fff',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
@@ -68,11 +69,23 @@ class App extends Component {
           })}
         </div>
       );
+
+      style.backgroundColor = 'red';
     }
+
+    const classes = [];
+    if (this.state.persons.length <= 2) {
+      classes.push('red');
+    }
+    if (this.state.persons.length <= 1) {
+      classes.push('bold');
+    }
+    const classesStr = classes.join(' ');
 
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
+        <p className={classesStr}>This is really working!</p>
         <button onClick={this.togglePersonsHandler} style={style}>
           Switch Name
         </button>
