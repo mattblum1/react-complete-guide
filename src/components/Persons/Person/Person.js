@@ -8,7 +8,6 @@ import withClass from '../../../hoc/withClass';
 class Person extends Component {
   constructor(props) {
     super(props);
-
     this.inputElementRef = React.createRef();
   }
 
