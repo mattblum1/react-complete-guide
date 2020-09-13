@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import Auxiliary from '../hoc/Auxiliary/Auxiliary';
 import Cockpit from '../components/Cockpit/Cockpit';
